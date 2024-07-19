@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image to Text</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="file" id="imageInput">
+    <button id="uploadButton">Upload</button>
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#uploadButton').click(function() {
+                var fileInput = $('#imageInput')[0];
+                if (fileInput.files.length > 0) {
+                    var formData = new FormData();
+                    formData.append('image', fileInput.files[0]);
+
+                    $.ajax({
+                        method: 'POST',
+                        url: 'https://api.api-ninjas.com/v1/imagetotext',
+                        headers: {
+                            'X-Api-Key': 'vXmU381VIWABlnv9SKpDwA==Oo0EgqQBuEOzKoKr' // Replace with your API key
+                        },
+                        data: formData,
+                        enctype: 'multipart/form-data',
+                        processData: false,
+                        contentType: false,
+                        success: function(result) {
+                            console.log(result); // Log the entire result object
+
+                            var extractedText = '';
+                            // Check if result is an array
+                            if (Array.isArray(result)) {
+                                result.forEach(function(item) {
+                                    if (item.text) {
+                                        extractedText += item.text + ' '; // Concatenate text with line breaks
+                                    }
+                                });
+                            } else if (result.text) {
+                                // Handle single object case
+                                extractedText = result.text;
+                            } else {
+                                // If structure is unknown, stringify the result
+                                extractedText = JSON.stringify(result);
+                            }
+
+                            $('#result').html('<p>Extracted Text:</p><p>' + extractedText + '</p>');
+                        },
+                        error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                            $('#result').html('<p>Error: ' + jqXHR.responseText + '</p>');
+                        }
+                    });
+                } else {
+                    alert('Please select an image file.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
