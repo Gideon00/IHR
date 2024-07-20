@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./onboarding-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Microsoft+Sans+Serif:wght@400&display=swap"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f0f0f0; /* Adjust background color as needed */
+      }
+
+      .onoarding-11 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .onoarding-1-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .frame-parent5 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .img-20240720-wa00011-1-container {
+        margin-bottom: 20px;
+      }
+
+      .img-20240720-wa00011-1-icon2,
+      .undraw-doctor-kw-5-l-1-icon1 {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .medical-check-up1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+
+      .container-parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .indicator-row1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .indicators1 {
+        display: flex;
+      }
+
+      .first-indicator1,
+      .second-indicator1 {
+        width: 10px;
+        height: 10px;
+        background-color: #888;
+        border-radius: 50%;
+        margin: 0 5px;
+      }
+
+      .next-button-indicator1 {
+        width: 30px;
+        height: 30px;
+        background-color: #888;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+
+      .next-button2 {
+        display: flex;
+        align-items: center;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .next-button-inner {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .mask-group-icon4 {
+        width: 24px;
+        height: auto;
+      }
+
+      .next2 {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .right-arrow-1-frame {
+        margin-left: 10px;
+      }
+
+      .right-arrow-1-icon3 {
+        width: 16px;
+        height: auto;
+      }
+
+      /* Responsive Styles */
+      @media (min-width: 768px) {
+        .medical-check-up1 {
+          font-size: 2rem;
+        }
+
+        .next-button2 {
+          padding: 12px 24px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .onoarding-11 {
+          padding: 40px;
+        }
+
+        .medical-check-up1 {
+          font-size: 2.5rem;
+        }
+
+        .next-button2 {
+          padding: 15px 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="onoarding-11" style="background-color: var(--color-aliceblue-200);">>
+      <section class="onoarding-1-child">
+        <div class="frame-parent5">
+          <div class="img-20240720-wa00011-1-container">
+            <img
+              class="img-20240720-wa00011-1-icon2"
+              loading="lazy"
+              alt=""
+              src="./public/img20240720wa00011-1@2x.png"
+            />
+          </div>
+          <img
+            class="undraw-doctor-kw-5-l-1-icon1"
+            loading="lazy"
+            alt=""
+            src="./public/undraw-doctor-kw5l-1.svg"
+          />
+          <b class="medical-check-up1">MEDICAL CHECK UP</b>
+        </div>
+      </section>
+      <div class="container-parent">
+        <div class="container">
+          <div class="indicator-row1">
+            <div class="indicators1">
+              <div class="first-indicator1"></div>
+              <div class="second-indicator1"></div>
+            </div>
+            <div class="next-button-indicator1"></div>
+          </div>
+        </div>
+        <div class="next-button2">
+          <div class="next-button-inner"></div>
+          <img class="mask-group-icon4" alt="" src="./public/mask-group.svg" />
+          <div class="next2">Next</div>
+          <div class="right-arrow-1-frame">
+            <img
+              class="right-arrow-1-icon3"
+              alt=""
+              src="./public/rightarrow-1@2x.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
