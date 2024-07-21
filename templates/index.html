@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/sign_in.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1, h2 {
+        color: #333;
+    }
+    h2 {
+        margin-top: 20px;
+    }
+    p {
+        margin: 10px 0;
+    }
+    .highlight {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-left: 5px solid #333;
+    }
+</style>
+  <title>Welcome page</title>
+
+</head>
+<body>
+
+  <div>
+    <div class="title">
+      {% if session["name"] %}Welcome Dr. {{ session["name"] }}!{% endif %}
+    </div>
+    <div class="insideContent">
+      {% if session["name"] %}
+        <div class="container">
+          <h1>Welcome Back to Intelligent Health Record (IHR)!</h1>
+        <p><strong>We’re excited to have you with us again.</strong> Here’s a quick update on what’s new and how you can make the most of your IHR experience:</p>
+
+        <h2>1. Recent Enhancements</h2>
+        <div class="highlight">
+            <p><strong>AI-Driven Documentation:</strong> Our latest updates include improvements in our AI algorithms, enhancing the accuracy of patient history transcriptions.</p>
+        </div>
+        <div class="highlight">
+            <p><strong>Streamlined Integration:</strong> We’ve optimized the integration process with existing EHR systems, making it even easier to sync your data.</p>
+        </div>
+
+        <h2>2. Tips for Optimal Use</h2>
+        <div class="highlight">
+            <p><strong>Leverage Advanced Features:</strong> Explore our new analytics tools and advanced reporting options available in the Premium Plan to get deeper insights into patient records.</p>
+        </div>
+        <div class="highlight">
+            <p><strong>Feedback Matters:</strong> Your feedback is invaluable. If you encounter any issues or have suggestions for improvement, please let us know through the feedback option in the settings.</p>
+        </div>
+
+        <h2>3. Stay Updated</h2>
+        <div class="highlight">
+            <p><strong>Upcoming Webinars:</strong> Join our upcoming webinars to learn about the latest features and best practices for using IHR effectively. Check our events section for dates and registration details.</p>
+        </div>
+        <div class="highlight">
+            <p><strong>Support Resources:</strong> For any questions or technical support, visit our help center or contact our support team directly.</p>
+        </div>
+
+        <p>Thank you for being a part of the IHR community. We’re here to support you in making healthcare documentation as seamless and efficient as possible.</p>
+        <p><strong>Best regards,</strong><br>The IHR Team</p>
+        
+        <a href="/conversation"> Click </a>to start Consultation<br>
+        <a href="/logout"> logout </a>
+        </div>
+
+
+
+        {% else %}
+        <div class="container">
+          <h1>Welcome to Intelligent Health Record (IHR)</h1>
+          <h2>Revolutionizing Healthcare Documentation with AI</h2>
+  
+          <p><strong>Welcome to IHR</strong></p>
+          <p>Welcome to Intelligent Health Record (IHR), the future of healthcare documentation. Our AI-powered platform is designed to enhance the efficiency of healthcare providers by automating tedious administrative tasks, allowing more time for patient care.</p>
+  
+          <h2>Why Choose IHR?</h2>
+          <div class="highlight">
+              <p><strong>Reduce Physician Burnout</strong></p>
+              <p>IHR transcribes doctor-patient conversations into detailed clinical notes, saving valuable time and reducing the stress of documentation.</p>
+          </div>
+          <div class="highlight">
+              <p><strong>Enhance Diagnostic Accuracy</strong></p>
+              <p>Our AI-driven differential diagnosis support provides physicians with accurate diagnostic suggestions based on patient history and symptoms.</p>
+          </div>
+          <div class="highlight">
+              <p><strong>Ensure Patient Safety</strong></p>
+              <p>Real-time drug-drug interaction alerts help prevent potential medication errors, ensuring the safety and well-being of patients.</p>
+          </div>
+          <div class="highlight">
+              <p><strong>Integrate Seamlessly</strong></p>
+              <p>IHR extracts relevant data from scanned paper records, integrating it into digital health records for a comprehensive view of patient history.</p>
+          </div>
+  
+          <h2>Key Features</h2>
+          <div class="highlight">
+              <p><strong>Automated Documentation</strong></p>
+              <p>Effortlessly transcribe and generate detailed clinical notes from doctor-patient conversations.</p>
+          </div>
+          <div class="highlight">
+              <p><strong>Differential Diagnosis Support</strong></p>
+              <p>Receive AI-driven diagnostic suggestions to enhance clinical decision-making.</p>
+          </div>
+          <div class="highlight">
+              <p><strong>Drug-Drug Interaction Alerts</strong></p>
+              <p>Get real-time alerts for potential drug-drug interactions to ensure patient safety.</p>
+          </div>
+          <div class="highlight">
+              <p><strong>Patient History Extraction</strong></p>
+              <p>Extract and integrate data from both digital and scanned paper records seamlessly.</p>
+          </div>
+  
+          <h2>How It Works</h2>
+          <ol>
+              <li><strong>Voice Recognition:</strong> Securely record doctor-patient conversations.</li>
+              <li><strong>AI Processing:</strong> Our advanced AI models transcribe conversations into detailed clinical notes.</li>
+              <li><strong>Data Integration:</strong> Extract and integrate patient history from digital and scanned records.</li>
+              <li><strong>Real-Time Alerts:</strong> Receive immediate alerts for potential drug-drug interactions.</li>
+          </ol>
+  
+          <h2>Join Us in Transforming Healthcare</h2>
+          <p>At IHR, we are committed to revolutionizing healthcare documentation. By leveraging the power of AI, we aim to reduce physician burnout, enhance diagnostic accuracy, and ensure patient safety. Join us on this journey to transform the way healthcare providers manage patient records and deliver care.</p>
+  
+          <h2>Get Started</h2>
+          <p>Experience the future of healthcare documentation with IHR. <a href="/register">Signup</a> now or <a href="/login">Sign in</a> today and see how our innovative platform can make a difference in your practice.</p>
+      </div>
+        
+      {% endif %}
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Intelligent Health Record (IHR)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #333;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
